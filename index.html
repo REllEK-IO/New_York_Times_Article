@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
+	<script type="text/javascript" src="assets/js/nyt.js"></script>
+	<title>New York Times Search App</title>
+</head>
+<body>
+<header>
+	<h1>New York Times Search</h1>
+</header>
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-12 col-centered main-block">
+			<div class="full-width blue">
+				<h3 style="margin-left: 10px;">Search Parameter</h3>
+			</div>
+			<div style="padding: 8px" class="full-width">
+				<h3>Search Terms: </h3>
+				<input type="text" name="search-terms" id="searchBar">
+				<br>
+				<h3>Number of Records to Retrieve: </h3>
+				<input type="text" name="search-terms" id="numRecord">
+				<br>
+				<h3>Start Year (Optional)</h3>
+				<input type="text" name="search-terms" id="numRecord">
+				<br>
+				<h3>End Year (Optional)</h3>
+				<input type="text" name="search-terms" id="numRecord">
+				<br>
+				<button class="btn btn-primary" id="search-btn">Search</button>
+				<button class="btn btn-primary" id="clear-btn">Clear Results</button>
+			</div>
+		</div>
+	</div>
+	<br>
+	<div class="row">
+		<div class="col-md-12 col-centered">
+			<div class="col-md-10 col-centered main-block">
+			<div class="full-width blue">
+				<h3 style="margin-left: 10px;">Search Parameter</h3>
+			</div>
+			<div style="padding: 8px" class="full-width" id="results">
+
+			</div>
+		</div>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>
