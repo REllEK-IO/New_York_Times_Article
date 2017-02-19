@@ -12,7 +12,7 @@ $("#search-btn").on('click', function(){
  		+ "&end_date=" + yearEnd + "1231"
  		;
  	console.log(queryURLBase);
-	$.ajax({url: queryURL, method: 'GET'})
+	$.ajax({url: queryURLBase, method: 'GET'})
 		.done(function(data){
 		//create new div
 		for (i = 0; i < numRec; i++){
@@ -25,13 +25,14 @@ $("#search-btn").on('click', function(){
 			var link = $("<a>");
 			//create the text for each element
 			var results = data.response.docs;
+			console.log(results)
 			var titleText = results[i].headline.main;
 			console.log(titleText);
-			var authText = resutls[i].source;
+			var authText = results[i].source;
 			console.log(authText);
-			var sectText = resutls[i].section_name;
-			var timeText = resutls[i].pub_date;
-			var linkText = resutls[i].web_url;
+			var sectText = results[i].section_name;
+			var timeText = results[i].pub_date;
+			var linkText = results[i].web_url;
 			//append text
 			title.append(titleText);
 			auth.append(authText);
@@ -44,8 +45,9 @@ $("#search-btn").on('click', function(){
 			newdiv.append(sect);
 			newdiv.append(time);
 			newdiv.append(link);
+			$("#results").append(newdiv);
 		}
 
 	})
 
-})
+});
